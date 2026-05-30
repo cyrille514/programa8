@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminador de Patrones</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+         :root {
+          @apply text-sm;
+           line-height: 1.5;
+         }
+      }
+    </style>
+</head>
+<body class="bg-[url('bg.jpg')] bg-cover bg-center bg-no-repeat w-full min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-10">
+
+    <!-- Contenedor Principal Ampliado para dos columnas -->
+    <main class="bg-gray-200 p-6 rounded-2xl shadow-2xl w-full  max-w-4xl border border-slate-700">
+        
+        <!-- Encabezado de la App -->
+        <header class="mb-6 text-center">
+            <h1 class="text-2xl font-bold text-violet-600 md:text-3xl">Limpiador de Texto Automático</h1>
+            <p class="text-black text-xl mt-1">Inserta tu texto y obtén el resultado en el formulario de salida</p>
+        </header>
+
+        <!-- Formulario estructurado con CSS Grid Responsivo -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Columna Izquierda: Entrada de Texto y Botón -->
+            <div class="flex flex-col justify-between gap-4">
+                <div>
+                    <label for="textoInput" class="block text-xl font-semibold text-black mb-2">Inserta texto:</label>
+                    <textarea id="textoInput" rows="5" class="w-full p-3 bg-slate-700 border border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-slate-200 text-sm resize-none" placeholder="Escribe o pega cualquier texto aquí..."></textarea>
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="textoResultado" class="block text-xl font-semibold text-black mb-2">Resultado Final Obtenido:</label>
+                    <textarea id="textoResultado" rows="5" readonly class="w-full h-full p-3 bg-slate-700 border border-slate-700 rounded-lg text-white font-medium text-sm resize-none focus:outline-none" placeholder="El texto aparecerá aquí tras pulsar el botón..."></textarea>
+                </div>
+
+                <button id="btnProcesar" class="w-40  bg-violet-600 hover:bg-yellow-500 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-lg uppercase text-sm tracking-wider">
+                    Limpiar patron
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
